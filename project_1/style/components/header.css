@@ -1,0 +1,129 @@
+.header{
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #00a8e0;
+    /*padding: 0 3% ;*/
+    color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    transition: .4s;
+}
+
+.header-item{
+    margin-right: 35px;
+}
+
+.header-item:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    transition: .4s;
+}
+.header-item:nth-child(2) a{
+    font-size: 18px;
+    color: white;
+    transition: .4s;
+}
+.header-item:nth-child(2) a:hover{
+    color: black;
+}
+.header-item:nth-child(1) {
+    font-family: "Roboto";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .4s;
+}
+.header-item:nth-child(1) h2{
+    font-size: 22px;
+    letter-spacing: 0.1rem;
+    margin-left: 10px;
+}
+.header-item:nth-child(1) img{
+    width: 32px;
+}
+
+.header-item:nth-child(3){
+    display: none;
+}
+
+#menu{
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    padding: 30px 5px;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    /*width: fit-content;*/
+    z-index: 10;
+    min-height: 100vh;
+    box-sizing: border-box;
+    border: 1px solid #00a8e0;
+    width: 250px;
+    display: none;
+    transition: .4s;
+}
+#menu > a{
+    margin: 0 150px 50px 10px;
+    box-sizing: border-box;
+    color: #00a8e0;
+    transition: .4s;
+}
+#menu > a:hover{
+    color: black;
+}
+
+.open-menu{
+    display: block !important;
+}
+
+@media(max-width:996px){
+    .header{
+        height: 40px;
+    }
+
+    .header-item:nth-child(2) a{
+        font-size: 12px;
+    }
+
+    .header-item:nth-child(1) h2{
+        font-size: 16px;
+    }
+
+    .header-item:nth-child(1) img{
+        width: 24px;
+    }
+}
+
+@media(max-width:785px){
+    .header-item:nth-child(2){
+        display: none;
+    }
+    
+    .header-item:nth-child(3){
+        opacity: 1;
+        border: 1.5px solid white;
+        border-radius: 4px;
+        padding: 3px 2px;
+        width: 50px;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    
+    }
+    
+    .header-item:nth-child(3) span{
+        text-align: center;
+        display: block;
+        margin: 1.5px;
+        height: 4px;
+        width: 50%;
+        background-color: white;
+    }
+}
